@@ -3,9 +3,9 @@
 
 public class Book : Product
 {
-    private int isbn;
-    private int pages;
-    public Book(int isbn, int pages, string title, int year, string category, bool isBorrowed, int shelfCode, string author) : base(title, year, category, isBorrowed, shelfCode, author)
+    protected int isbn;
+    protected int pages;
+    public Book(int isbn, int pages, string title, int year, string category, bool isBorrowed, int shelfCode, string author, string serialNumber) : base(title, year, category, isBorrowed, shelfCode, author, serialNumber)
     {
         this.isbn = isbn;
         this.pages = pages;

@@ -1,6 +1,10 @@
 ﻿
 // See https://aka.ms/new-console-template for more information
+Library myLibrary = new Library("Biblioteca Ciccarelli");
+Console.WriteLine(myLibrary);
 
+Book myBook = new Book(123456, 152, "Ciao", 1986, "Horror", true, 25, "Ciccarelli", "15648312");
+Console.WriteLine(myBook);
 
 Console.WriteLine("Inserisci il tuo nome");
 string newName = Console.ReadLine();

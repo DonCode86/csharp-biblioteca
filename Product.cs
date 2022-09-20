@@ -3,14 +3,15 @@
 
 public class Product
 {
-    private string title;
-    private int year;
-    private string category;
-    private bool isBorrowed;
-    private int shelfCode;
-    private string author;
+    protected string title;
+    protected int year;
+    protected string category;
+    protected bool isBorrowed;
+    protected int shelfCode;
+    protected string author;
+    protected string serialNumber;
 
-    public Product (string title, int year, string category, bool isBorrowed, int shelfCode, string author)
+    public Product (string title, int year, string category, bool isBorrowed, int shelfCode, string author, string serialNumber)
     {
         this.title = title;
         this.year = year;
@@ -18,5 +19,26 @@ public class Product
         this.isBorrowed = isBorrowed;
         this.shelfCode = shelfCode;
         this.author = author;
+        this.serialNumber = serialNumber;
+    }
+
+    public string Title
+    {
+        get { return title; }
+        
+    }
+
+    public bool IsBorrowed
+    {
+        get { return isBorrowed; }
+        set { isBorrowed = value; }
+    }
+
+    public string SerialNumber
+    {
+        get
+        {
+            return this.serialNumber;
+        }
     }
 }
