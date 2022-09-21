@@ -3,11 +3,10 @@
 
 public class Book : Product
 {
-    protected int isbn;
+    
     protected int pages;
-    public Book(int isbn, int pages, string title, int year, string category, bool isBorrowed, int shelfCode, string author, string serialNumber) : base(title, year, category, isBorrowed, shelfCode, author, serialNumber)
+    public Book(string isbn, int pages, string title, int year, string category, int shelfCode, string author, int serialNumber) : base(isbn, title, year, category, shelfCode, author)
     {
-        this.isbn = isbn;
         this.pages = pages;
     }
 }

@@ -3,23 +3,27 @@
 
 public class Product
 {
+    protected string serialNumber;
     protected string title;
     protected int year;
     protected string category;
     protected bool isBorrowed;
     protected int shelfCode;
     protected string author;
-    protected string serialNumber;
-
-    public Product (string title, int year, string category, bool isBorrowed, int shelfCode, string author, string serialNumber)
+   
+    public Product (string serialNumber, string title, int year, string category, int shelfCode, string author)
     {
+        this.serialNumber = serialNumber;
         this.title = title;
         this.year = year;
         this.category = category;
-        this.isBorrowed = isBorrowed;
+        this.isBorrowed = false;
         this.shelfCode = shelfCode;
-        this.author = author;
-        this.serialNumber = serialNumber;
+        this.author = author; 
+    }
+    public Product()
+    {
+        title = "";
     }
 
     public string Title
@@ -41,4 +45,5 @@ public class Product
             return this.serialNumber;
         }
     }
+   
 }

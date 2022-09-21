@@ -3,11 +3,9 @@
 
 public class Dvd : Product
 {
-    protected int serialNumber;
     protected int duration;
-    public Dvd(int serialNumber, int duration, string title, int year, string category, bool isBorrowed, int shelfCode, string author) : base(title, year, category, isBorrowed, shelfCode, author)
+    public Dvd(string serialNumber, int duration, string title, int year, string category, int shelfCode, string author) : base(serialNumber, title, year, category, shelfCode, author)
     {
-        this.serialNumber = serialNumber;
         this.duration = duration;
     }
 }
